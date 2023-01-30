@@ -24,6 +24,7 @@ class Main
         {
             let logger = new CLILogger();
             logger.log("Unknown command, try running 'hades -h'", "?");
+            process.exit();
         }
     }
 }
