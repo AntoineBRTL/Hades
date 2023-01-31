@@ -22,7 +22,7 @@ To compile from source, you will need to follow the instructions listed below.
 1) [Transpile](https://code.visualstudio.com/docs/typescript/typescript-compiling) all `.ts` files into `.js`.
 2) Install [Nexe](https://github.com/nexe/nexe).
 3) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
-4) Change `linux-x64` with the os you are using following by the [architecture of your CPU](https://linuxconfig.org/what-is-my-architecture-is-my-cpu-64-bit-or-32-bit#:~:text=The%20best%20way%20to%20quickly,default%20on%20all%20Linux%20distros.).
+4) Change `linux-x64` with the os you are using following by the [architecture] of your CPU(https://linuxconfig.org/what-is-my-architecture-is-my-cpu-64-bit-or-32-bit#:~:text=The%20best%20way%20to%20quickly,default%20on%20all%20Linux%20distros.).
 
 Note that the program is already compiled in the `./bin` directory.
 
