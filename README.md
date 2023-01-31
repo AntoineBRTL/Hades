@@ -11,7 +11,7 @@ Disclaimer
 - This software is still in development, not all the features are implemented yet.
 
 To use this program, 
-1) Garb a compiled version of this program.
+1) Garb a compiled version of the program.
 2) Run `Hades -a [port to listen on]` on the main machine.
 3) Run `Hades -c [admin's port] [admin's ip]` on a target machine.
 4) Done !
@@ -27,7 +27,7 @@ To compile from source, you will need to follow the instructions listed below.
 Note that the program is already compiled in the `./bin` directory.
 
 ## Libs
-Here is the list of used libraries
+Here is the list of used libraries, you can download all of them using `npm install`.
 - `Axios` - Used to send requests.
 - `WSS` - Used for socket connections.
 - `Express` - Used to setup servers.
