@@ -6,7 +6,7 @@ This program is written in Typescript and is made to run with [Node.js](https://
 <!-- Note that this program is compilable using , and the last version is compiled in the `./bin` directory. -->
 
 ## Compile from source
-1) To compile the program you will firstly need to transpile the all source code to javascript, this can be done using typescript-compiler.
+<!-- 1) To compile the program you will firstly need to transpile the all source code to javascript, this can be done using typescript-compiler.
 
     Download [Typescript](https://github.com/microsoft/TypeScript) and run the following command into the root directory.
     ```bash 
@@ -19,7 +19,12 @@ This program is written in Typescript and is made to run with [Node.js](https://
     ```bash 
     nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"
     ```
-    Change `linux-x64` with the os you are using following by the architecture of CPU.
+    Change `linux-x64` with the os you are using following by the architecture of CPU. -->
+
+1) Transpile all `.ts` files into `.js`.
+2) Install [Nexe](https://github.com/nexe/nexe).
+3) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
+4) Change `linux-x64` with the os you are using following by the architecture of CPU.
 
 ## How to use
 
