@@ -26,6 +26,8 @@ This program is written in Typescript and is made to run with [Node.js](https://
 3) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
 4) Change `linux-x64` with the os you are using following by the architecture of CPU.
 
+Note that the program is already compiled in the `./bin` directory.
+
 ## How to use
 
 
