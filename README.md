@@ -29,5 +29,6 @@ Note that the program is already compiled in the `./bin` directory.
 ## Libs
 Here is the list of used libraries, you can download all of them using `npm install`.
 - `Axios` - Used to send requests.
+- `Body-parser` - Used to parse responses.
 - `WSS` - Used for socket connections.
 - `Express` - Used to setup servers.
