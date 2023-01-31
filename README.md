@@ -6,27 +6,12 @@ This program is written in Typescript and is made to run with [Node.js](https://
 <!-- Note that this program is compilable using , and the last version is compiled in the `./bin` directory. -->
 
 ## Compile using Nexe
-<!-- 1) To compile the program you will firstly need to transpile the all source code to javascript, this can be done using typescript-compiler.
-
-    Download [Typescript](https://github.com/microsoft/TypeScript) and run the following command into the root directory.
-    ```bash 
-    tsc
-    ```
-
-2) Once the program is transpiled, you can proceed to compile it. There are several different tools to compile, but I recommend the use of [Nexe](https://github.com/nexe/nexe).
-
-    Download [Nexe](https://github.com/nexe/nexe) and run the following command into the root directory.
-    ```bash 
-    nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"
-    ```
-    Change `linux-x64` with the os you are using following by the architecture of CPU. -->
-
 To compile from source, you will need to follow the instructions listed below.
 
-1) Transpile all `.ts` files into `.js`.
+1) [Transpile](https://code.visualstudio.com/docs/typescript/typescript-compiling) all `.ts` files into `.js`.
 2) Install [Nexe](https://github.com/nexe/nexe).
 3) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
-4) Change `linux-x64` with the os you are using following by the architecture of CPU.
+4) Change `linux-x64` with the os you are using following by the [architecture of your CPU](https://linuxconfig.org/what-is-my-architecture-is-my-cpu-64-bit-or-32-bit#:~:text=The%20best%20way%20to%20quickly,default%20on%20all%20Linux%20distros.).
 
 Note that the program is already compiled in the `./bin` directory.
 
