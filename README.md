@@ -12,8 +12,8 @@ Disclaimer
 
 To use this program, 
 1) Garb a compiled version of the program.
-2) Run `Hades -a [port to listen on]` on the main machine.
-3) Run `Hades -c [admin's port] [admin's ip]` on a target machine.
+2) Run `hades -a [port to listen on]` on the main machine.
+3) Run `hades -c [admin's port] [admin's ip]` on a target machine.
 4) Done !
 
 ## Compile using Nexe
