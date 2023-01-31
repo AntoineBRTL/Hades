@@ -1,5 +1,5 @@
 # Hades
-Simple reverse shell CLI developed for education purposes.
+Simple reverse shell developed for education purposes.
 
 This program is written in Typescript and is made to run with [Node.js](https://nodejs.org/). Some libraries are required, [see](#libs) the list of libraries used in this project.
 
