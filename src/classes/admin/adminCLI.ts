@@ -50,7 +50,7 @@ export class AdminCLI
 
     private inputCommandLine(socket:AdminSocket)
     {
-        readline.question(`${socket.getSocketPort().toString()}@${socket.getCWD()}> $ `, function(this:AdminCLI, input:string)
+        readline.question(`${socket.getSocketPort().toString()}@${socket.getCWD()} $ `, function(this:AdminCLI, input:string)
         {
             this.handleInputCommandLine(socket, input);
         }.bind(this));
@@ -75,6 +75,7 @@ export class AdminCLI
 
         if(splitedInput[0] == "-e" || splitedInput[0] == "--exit")
         {
+            this.CLILogger.speparator();
             this.input();
             return;
         }
@@ -112,6 +113,9 @@ export class AdminCLI
             let socket = AdminSocket.getSocket(port);
 
             if(!socket) {this.CLILogger.error("Can't find the machine"); this.input(); return;}
+            
+            this.CLILogger.speparator();
+
             new AdminCLICommandHelper();
             this.inputCommandLine(socket);
             return;
@@ -120,6 +124,11 @@ export class AdminCLI
         if(splitedInput[0] == "-e" || splitedInput[0] == "--exit")
         {
             process.exit(0);
+        }
+
+        if(splitedInput[0] == "-i" || splitedInput[0] == "--info")
+        {
+            this.CLILogger.write(`Listening on port ${this.runningPort.toString()}`);
         }
 
         this.input();

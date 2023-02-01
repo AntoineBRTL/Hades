@@ -11,6 +11,7 @@ export class AdminCLIHelper
     -d [port]       --disconnect    -- Shutdowns the client on the machine [port].
     -e              --exit          -- Exits Hades.
     -h              --help          -- Displays help.
+    -i              --info          -- Logs informations.
     -l              --list          -- Lists all machines.
     `;
 

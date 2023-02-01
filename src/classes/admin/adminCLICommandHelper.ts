@@ -1,7 +1,6 @@
 export class AdminCLICommandHelper
 {
     private helper:string = `
-    
     Hades CLI command mode helper:
 
     [option] [value]

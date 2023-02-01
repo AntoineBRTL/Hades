@@ -28,4 +28,9 @@ export class CLILogger
     {
         this.log(this.CLIColor.yellow(warn), "!");
     }
+
+    public speparator()
+    {
+        console.log("\n--------------------------------\n");
+    }
 }
