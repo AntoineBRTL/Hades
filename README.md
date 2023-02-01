@@ -39,7 +39,7 @@ Here is the list of used libraries, you can download all of them using `npm inst
 - `Express` - Used to setup servers.
 
 ## Run from command line
-This can be usefull for exemple if you want to use a USB stick which simulate a keyboard when you plug it into a machine.
+This can be usefull for exemple if you want to use a USB stick which emulate a keyboard when you plug it into a machine.
 
 ### Window
 Copy and paste the commands in a cmd on a target machine
