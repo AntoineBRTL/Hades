@@ -29,7 +29,7 @@ export class AdminListener
 
         this.app.get("*", function(this:AdminListener, request:Request, response:Response)
         {
-            this.CLIlogger.warn("Receiving request hades is not supposed to receive");
+            this.CLIlogger.warn(`Receiving request hades is not supposed to receive from ${request.ip}`);
             response.status(408).send();
         }.bind(this));
 
