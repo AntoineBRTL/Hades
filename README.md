@@ -38,7 +38,7 @@ Here is the list of used libraries, you can download all of them using `npm inst
 - `WSS` - Used for socket connections.
 - `Express` - Used to setup servers.
 
-## Run from command line
+## Install & Run from command line
 This can be usefull for exemple if you want to use a USB stick which emulate a keyboard when you plug it into a machine.
 
 ### Window
