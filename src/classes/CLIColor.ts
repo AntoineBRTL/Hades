@@ -32,4 +32,9 @@ export class CLIColor
     {
         return this.fgRed + s + this.reset;
     }
+
+    public yellow(s:string):string
+    {
+        return this.fgYellow + s + this.reset;
+    }
 }

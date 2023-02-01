@@ -23,4 +23,9 @@ export class CLILogger
     {
         this.log(this.CLIColor.red(error), "-");
     }
+
+    public warn(warn:string)
+    {
+        this.log(this.CLIColor.yellow(warn), "!");
+    }
 }
