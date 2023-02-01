@@ -14,10 +14,10 @@ export class AdminListener
     private onLosingConnection: Function;
     private CLIlogger: CLILogger;
 
-    public constructor(port: number, adminLogger:CLILogger, onGettingConnection:Function, onLosingConnection:Function)
+    public constructor(port: number, CLILogger:CLILogger, onGettingConnection:Function, onLosingConnection:Function)
     {
         this.serverPort = port;
-        this.CLIlogger = adminLogger;
+        this.CLIlogger = CLILogger;
 
         this.app = express();
         this.app.use(bodyParser.json());
@@ -26,6 +26,12 @@ export class AdminListener
 
         this.onGettingConnection = onGettingConnection;
         this.onLosingConnection = onLosingConnection;
+
+        this.app.get("*", function(this:AdminListener, request:Request, response:Response)
+        {
+            this.CLIlogger.warn("Receiving request hades is not supposed to receive");
+            response.status(408).send();
+        }.bind(this));
 
         this.app.post("*", function(this:AdminListener, request:Request, response:Response)
         {
