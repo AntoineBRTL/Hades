@@ -15,7 +15,7 @@ This program is written in Typescript and is made to run with [Node.js](https://
 2) Run `node src/main.js -a [port to listen on]` on the main machine.
 3) Run `node src/main.js -c [admin's port] [admin's ip]` on a target machine.
 
-### Use a compiled version 
+### Use a compiled version (Recommended)
 1) Garb a compiled version of the program.
 2) Run `hades -a [port to listen on]` on the main machine.
 3) Run `hades -c [admin's port] [admin's ip]` on a target machine.
