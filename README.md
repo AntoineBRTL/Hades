@@ -51,7 +51,7 @@ h.exe -c localhost
 exit
 ```
 
-Change `localhost` with the ip of the main machine.
+Change `localhost` with the ip of the main machine. The URL of the `wget` can also be change with the lastest release download link.
 
 ### Linux 
 Not done yet
