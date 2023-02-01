@@ -9,7 +9,7 @@ export class CommandHelper
     options:
 
     -a [port]       --admin         -- Starts hades as administrator.
-    -c [port] [ip]  --client        -- Starts hades as client required, ([ip] == *) = Broadcast.
+    -c [ip] [port]  --client        -- Starts hades as client required.
     -h              --help          -- Displays help.
     `;
 
