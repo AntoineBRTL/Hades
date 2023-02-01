@@ -39,7 +39,7 @@ class Main
         else
         {
             let logger = new CLILogger();
-            logger.log("Unknown command, try running 'hades -h'", "?");
+            logger.error("Unknown command, try running 'hades -h'");
             process.exit();
         }
     }

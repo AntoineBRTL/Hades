@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import { Req } from '../client/requestSender.js';
 import { AdminSocket } from './adminSocket.js';
 import { Server } from 'http';
-import { AdminLogger } from './adminLogger.js';
+import { CLILogger } from '../CLILogger.js';
 
 export class AdminListener
 {
@@ -12,12 +12,12 @@ export class AdminListener
     private server: Server;
     private onGettingConnection: Function;
     private onLosingConnection: Function;
-    private adminLogger: AdminLogger;
+    private CLIlogger: CLILogger;
 
-    public constructor(port: number, adminLogger:AdminLogger, onGettingConnection:Function, onLosingConnection:Function)
+    public constructor(port: number, adminLogger:CLILogger, onGettingConnection:Function, onLosingConnection:Function)
     {
         this.serverPort = port;
-        this.adminLogger = adminLogger;
+        this.CLIlogger = adminLogger;
 
         this.app = express();
         this.app.use(bodyParser.json());

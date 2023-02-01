@@ -1,4 +1,4 @@
-import { AdminLogger } from "./adminLogger.js";
+import { CLILogger } from "../CLILogger.js";
 
 export class AdminCLILoader
 {
@@ -16,14 +16,14 @@ export class AdminCLILoader
     Hades is not a ssh software, it uses http(s) & ws protocols.`;
 
     private runningPort:number;
-    private adminLogger:AdminLogger;
+    private adminLogger:CLILogger;
 
-    public constructor(runningPort:number, adminLogger:AdminLogger)
+    public constructor(runningPort:number, adminLogger:CLILogger)
     {
         this.runningPort = runningPort;
         this.adminLogger = adminLogger;
         
-        this.adminLogger.log(`Running Hades admin mode on port ${this.runningPort.toString()}`);
+        this.adminLogger.write(`Running Hades admin mode on port ${this.runningPort.toString()}`);
         console.log(this.license);
     }
 }

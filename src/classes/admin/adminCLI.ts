@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { createInterface } from "readline";
+import { CLILogger } from '../CLILogger.js';
 import { AdminCLICommandHelper } from './adminCLICommandHelper.js';
 import { AdminCLIHelper } from './adminCLIHelper.js';
 import { AdminCLILoader } from "./adminCLILoader.js";
 import { AdminListener } from "./adminListener.js";
-import { AdminLogger } from './adminLogger.js';
 import { AdminSocket } from './adminSocket.js';
 
 const readline = createInterface({
@@ -17,14 +17,14 @@ export class AdminCLI
     private runningPort: number;
     private adminCLILoader: AdminCLILoader;
     private adminListener: AdminListener;
-    private adminLogger: AdminLogger;
+    private CLILogger: CLILogger;
 
     public constructor(runningPort: number)
     {
         this.runningPort = runningPort;
-        this.adminLogger = new AdminLogger();
-        this.adminCLILoader = new AdminCLILoader(this.runningPort, this.adminLogger);
-        this.adminListener = new AdminListener(this.runningPort, this.adminLogger, this.onGettingConnection.bind(this), this.onLosingConnection.bind(this));
+        this.CLILogger = new CLILogger();
+        this.adminCLILoader = new AdminCLILoader(this.runningPort, this.CLILogger);
+        this.adminListener = new AdminListener(this.runningPort, this.CLILogger, this.onGettingConnection.bind(this), this.onLosingConnection.bind(this));
 
         new AdminCLIHelper();
         this.input();
@@ -101,7 +101,7 @@ export class AdminCLI
 
         if(splitedInput[0] == "-l" || splitedInput[0] == "--list")
         {
-            AdminSocket.logSockets(this.adminLogger);
+            AdminSocket.logSockets(this.CLILogger);
             this.input();
             return;
         }
@@ -111,7 +111,7 @@ export class AdminCLI
             let port = parseInt(splitedInput[1]);
             let socket = AdminSocket.getSocket(port);
 
-            if(!socket) {this.adminLogger.error("Can't find the machine"); this.input(); return;}
+            if(!socket) {this.CLILogger.error("Can't find the machine"); this.input(); return;}
             new AdminCLICommandHelper();
             this.inputCommandLine(socket);
             return;

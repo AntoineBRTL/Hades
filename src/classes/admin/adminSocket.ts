@@ -1,18 +1,18 @@
 import { Response, Request } from "express";
 import { WebSocketServer, WebSocket } from "ws";
-import { AdminLogger } from "./adminLogger.js";
 import { SocketAction } from "../client/clientSocket.js";
+import { CLILogger } from "../CLILogger.js";
 
 export class AdminSocket
 {
     private static sockets:AdminSocket[] = new Array();
 
-    public static logSockets(adminLogger:AdminLogger)
+    public static logSockets(CLILogger:CLILogger)
     {
-        adminLogger.log(`${this.sockets.length} connection(s) opened`);
+        CLILogger.write(`${this.sockets.length} connection(s) opened`);
         for(let socket of this.sockets)
         {
-            adminLogger.log(`${socket.socketPort.toString()} : ${socket.ip}`);
+            CLILogger.write(`${socket.socketPort.toString()} : ${socket.ip}`);
         }
     }
 
